@@ -1,5 +1,6 @@
 <h1 align="center">
-    Eat what
+    <img src=".github/food.svg" style="width: 50px;"/>
+    <p>Eat what</p>
 </h1>
 
 <p align="center">
@@ -11,6 +12,8 @@
 # 简介
 
 每天都在纠结到底吃啥？把你喜欢吃的列出来，随机Roll一个！
+
+PS: 现在是下午4点，我抑郁了。关注永雏塔菲喵，关注永雏塔菲谢谢喵～
 
 # 开源协议
 
