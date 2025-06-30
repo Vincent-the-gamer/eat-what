@@ -49,8 +49,16 @@ function generatePrizes(foods: string[]) {
     return prizes
 }
 
+onMounted(() => {
+    const _foods = localStorage.getItem("foods")
+    if(_foods) {
+        foods.value = _foods
+    }
+})
+
 watch(() => foods.value, (newVal) => {
     wheelData.prizes = generatePrizes(newVal.split("\n"))
+    localStorage.setItem("foods", newVal)
 })
 
 // 抽奖
