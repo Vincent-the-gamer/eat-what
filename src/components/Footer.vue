@@ -7,7 +7,7 @@
     <a
       i-carbon-logo-github icon-btn
       rel="noreferrer"
-      href="https://github.com/Vincent-the-gamer/vitesse-superslim"
+      href="https://github.com/Vincent-the-gamer/eat-what"
       target="_blank"
       title="GitHub"
     />

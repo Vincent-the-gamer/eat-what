@@ -1,51 +1,33 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import packageJson from "../../package.json"
-
-const viteVersion = packageJson.devDependencies.vite
-
 defineOptions({
   name: 'IndexPage',
 })
 
-const name = ref('')
-
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
+const foods = ref<string[]>([])
 </script>
 
 <template>
   <div>
-    <div i-carbon-campsite inline-block text-4xl />
+    <div i-hugeicons-serving-food inline-block text-4xl />
+    <p>吃啥？</p>
     <p>
-      <a rel="noreferrer" href="https://github.com/Vincent-the-gamer/vitesse-superslim" target="_blank">
-        Vitesse Superslim
-      </a>
+      <em text-sm op75>今天早上/中午/晚上到底吃啥？</em>
     </p>
-    <p>
-      <em text-sm op75>Opinionated Vite starter template, but a superslim version. (*╹▽╹*)</em>
-    </p>
-    <h3 op75 m-1>Vite version: {{ viteVersion }}</h3>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      placeholder="What's your name?"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-
-    <div>
-      <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
-      >
-        Go
-      </button>
+    
+    <div mt-4>
+      <p>输入你想吃的食物，一行一个: </p>
+      <textarea v-model="foods" />
     </div>
+
   </div>
 </template>
+
+
+<style lang="css" scoped>
+textarea {
+  width: 20rem;
+  height: 8rem;
+  border: 1.2px solid deeppink;
+  border-radius: 4px;
+}
+</style>

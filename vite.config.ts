@@ -11,7 +11,6 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './',
   server: {
     host: 'localhost',
     port: 8080,
