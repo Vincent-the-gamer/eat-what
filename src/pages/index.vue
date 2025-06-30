@@ -2,8 +2,6 @@
 defineOptions({
   name: 'IndexPage',
 })
-
-const foods = ref<string[]>([])
 </script>
 
 <template>
@@ -15,19 +13,12 @@ const foods = ref<string[]>([])
     </p>
     
     <div mt-4>
-      <p>输入你想吃的食物，一行一个: </p>
-      <textarea v-model="foods" />
+      <Raffle />
     </div>
-
   </div>
 </template>
 
 
 <style lang="css" scoped>
-textarea {
-  width: 20rem;
-  height: 8rem;
-  border: 1.2px solid deeppink;
-  border-radius: 4px;
-}
+
 </style>

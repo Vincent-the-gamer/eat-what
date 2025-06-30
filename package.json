@@ -11,6 +11,7 @@
     "dep": "taze major"
   },
   "dependencies": {
+    "@lucky-canvas/vue": "^0.1.11",
     "@vueuse/core": "^13.4.0",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
