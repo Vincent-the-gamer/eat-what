@@ -9,6 +9,8 @@
 </template>
 
 <script setup lang="ts">
+import { get } from 'http'
+
 const wheel: any = ref(null)
 
 const foods = ref<string>("")
@@ -61,12 +63,26 @@ watch(() => foods.value, (newVal) => {
     localStorage.setItem("foods", newVal)
 })
 
-// 抽奖
+// 优化随机索引获取逻辑，使用crypto实现随机
+function getRandomNumberInRange(min: number, max: number): number {
+  const range = max - min + 1
+  const randomArray = new Uint32Array(1)
+  let randomNumber = 0
+
+  do {
+    crypto.getRandomValues(randomArray)
+    randomNumber = randomArray[0] % range
+  } while (randomNumber >= range)
+
+  return min + randomNumber
+}
+
+// 开始抽奖
 function start() {
     const foodsArr = foods.value.split("\n")
     wheel.value?.play()
     useTimeoutFn(() => {
-        const index: number = Math.floor(Math.random() * foodsArr.length)
+        const index: number = getRandomNumberInRange(0, foodsArr.length - 1)
         wheel.value?.stop(index)
     }, 3000)
 }
