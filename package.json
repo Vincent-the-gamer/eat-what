@@ -8,7 +8,8 @@
     "build": "vite build",
     "dev": "vite --open",
     "preview": "vite preview",
-    "dep": "taze major"
+    "dep": "taze major",
+    "assets": "pwa-assets-generator"
   },
   "dependencies": {
     "@lucky-canvas/vue": "^0.1.11",
@@ -21,6 +22,7 @@
     "@iconify/json": "^2.2.371",
     "@types/node": "^22.17.1",
     "@unocss/reset": "^66.4.2",
+    "@vite-pwa/assets-generator": "^1.0.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "eslint": "^9.33.0",
     "eslint-plugin-format": "^1.0.1",
