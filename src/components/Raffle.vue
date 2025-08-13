@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>输入你想吃的食物，一行一个: </p>
-        <textarea v-model="foods" />
+        <textarea v-model="foods" dark:bg-black />
         <LuckyWheel ref="wheel" class="wheel" width="200px" height="200px" :prizes="wheelData.prizes"
             :blocks="wheelData.blocks" :buttons="wheelData.buttons" @start="start" @end="end" />
         <div mt-4 font-size-6 color-red>抽奖结果：{{ result || "空" }}</div>
@@ -9,8 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { get } from 'http'
-
 const wheel: any = ref(null)
 
 const foods = ref<string>("")
