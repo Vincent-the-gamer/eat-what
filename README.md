@@ -15,6 +15,15 @@
 
 PS: 现在是下午4点，我抑郁了。关注永雏塔菲喵，关注永雏塔菲谢谢喵～
 
+# PWA
+本页面支持渐进式Web应用（PWA），只需要访问 https://today-eat-what.netlify.app/ 即可添加到电脑/手机/平板。
+
+以iPhone Safari浏览器为例：
+
+![pwa-ios-use1](.github/pwa-ios-use1.png)
+![pwa-ios-use2](.github/pwa-ios-use2.jpeg)
+![pwa-ios-use3](.github/pwa-ios-use3.png)
+
 # 开源协议
 
 [MIT 协议](./LICENSE)
